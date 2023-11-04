@@ -1,0 +1,1 @@
+//Lo que es la interfaz la situé en el main, en vez de llamarla a través de un método de esta clase
