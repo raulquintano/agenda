@@ -1,8 +1,9 @@
 package dominio;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.Serializable;
 
-public class Agenda {
+public class Agenda implements Serializable{
     
     ArrayList<Contactos> agenda = new ArrayList<>();
     

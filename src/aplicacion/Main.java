@@ -1,7 +1,7 @@
 
 import dominio.Contactos;
 import dominio.Agenda;
-
+import interfaz.Interfaz;
 import java.util.Scanner;
 
 public class Main {
@@ -9,6 +9,7 @@ public class Main {
         
         
         Agenda agenda = new Agenda();
+        Interfaz interfaz = new Interfaz();
         Scanner lector = new Scanner(System.in);
         int opcion;
         boolean salir = true;
@@ -36,6 +37,8 @@ public class Main {
                     String nuevoNumero = lectorNombre.nextLine();
                     contactos.setNumero(nuevoNumero);
                     agenda.anadirContactos(contactos);
+                    interfaz.grabar();
+
                     break;
                 
                 case 2:

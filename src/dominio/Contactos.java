@@ -1,6 +1,7 @@
 package dominio;
+import java.io.Serializable;
 
-public class Contactos {
+public class Contactos implements Serializable {
     
     private String nombre;
     private String numero;
@@ -30,6 +31,11 @@ public class Contactos {
 
     public String getNumero() {
         return numero;
+    }
+
+    public boolean equals (Object p){
+        Contactos contacto = (Contactos) p;
+        return nombre.equals(contacto.nombre);
     }
     
     public String toString() {
