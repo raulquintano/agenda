@@ -2,18 +2,29 @@ package dominio;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.Serializable;
-
+/**
+ * Clase que representa una agenda de contactos
+ 
+ */
 public class Agenda implements Serializable{
-    
+    /**
+     * Lista de contactos
+     */   
     ArrayList<Contactos> agenda = new ArrayList<>();
     
+    /**
+     * Constructor de la clase
+     */
     public void anadirContactos(Contactos contactos)
     {
         agenda.add(contactos);
         System.out.println("Añadido con éxtio");
         System.out.println("");
     }
-    
+    /**
+     * Metodo que permite añadir un contacto a la lista de contactos
+     * @param contactos
+     */
     public void mostrarContactos()
     {
         if(agenda.isEmpty())
@@ -29,7 +40,9 @@ public class Agenda implements Serializable{
             }  
         }      
     }
-    
+    /**
+     * Metodo que permite eliminar los contactos de la lista
+     */
     public void eliminarContacto(String nombreEliminado)
     {
         for (int i = 0; i < agenda.size(); i++) 
@@ -49,7 +62,9 @@ public class Agenda implements Serializable{
         }
 
     }
-    
+    /**
+     * Metodo que permite modificar los contactos de la lista
+     */
     public void modificarUsuario(String modificarN, Contactos contactos)
     {
         for(int i = 0; i<agenda.size(); i++)

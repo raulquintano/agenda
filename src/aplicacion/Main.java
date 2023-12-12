@@ -5,6 +5,10 @@ import interfaz.Interfaz;
 import java.util.Scanner;
 
 public class Main {
+    /**
+     * Metodo principal
+     * @param args
+     */
     public static void main(String[] args) {
         
         
@@ -13,7 +17,10 @@ public class Main {
         Scanner lector = new Scanner(System.in);
         int opcion;
         boolean salir = true;
-        
+        /** 
+         * Menu de la agenda    
+         */
+        interfaz.leer();
         do
         {
             System.out.println("1) Añadir contacto");
@@ -62,6 +69,7 @@ public class Main {
                 
                 case 5:
                     System.out.println("Agenda Cerrada");
+                    interfaz.grabar();
                     salir = false;
                     break;
                 
